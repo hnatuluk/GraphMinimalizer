@@ -1,0 +1,16 @@
+InputsStateTable
+3
+4
+a b c - a
+b b b - a
+c a a - a
+States
+3
+a b c
+FiniteStates
+1 
+a
+Inputs
+4
+1 2 3 4
+
