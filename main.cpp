@@ -20,7 +20,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     if (argc < 2 || argc > 3){
-        cerr << "Pocet vstupnich argumentů musí být roven 1 pro výstup na konsoly."<<endl;
+        cerr << "Pocet vstupnich argumentů musí být roven 1 pro výstup na konsoli."<<endl;
         cerr << "Pocet vstupnich argumentů musí být roven 2 pro výstup na do souboru."<<endl;
         return 1;
     }

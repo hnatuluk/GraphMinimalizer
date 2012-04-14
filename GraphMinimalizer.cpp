@@ -1,11 +1,5 @@
 
 #include "GraphMinimalizer.h"
-#include "StateLoader.h"
-#include "InputLoader.h"
-#include "FiniteStateLoader.h"
-#include "GraphLoader.h"
-#include "InputStateTable.h"
-#include <iostream>
 using namespace std;
 
 GraphMinimalizer::GraphMinimalizer(File *f) {

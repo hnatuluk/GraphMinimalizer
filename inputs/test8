@@ -3,14 +3,14 @@ States
 a b c d
 FiniteStates
 2
-a b
+x y
 Inputs
-4
-1 2 3 4
+5
+1 2 3 4 5
 InputsStateTable
 4
 4
-a a a - a
-b b b b b
-c c c - c
-d d d d d
+w a a - a
+f b r b b
+g c c - c
+h d d q d

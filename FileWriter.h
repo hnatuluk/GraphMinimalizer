@@ -12,6 +12,7 @@
 #include <sstream>
 
 #include "ConsoleWriter.h"
+#include "File.h"
 
 class FileWriter : public ConsoleWriter {
     string filename;

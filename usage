@@ -1,0 +1,14 @@
+Pro zkompilovani prace zvolte:		make build
+Pro test 1 vystup na konsoli:		make test1
+Pro test 1 vystup do souboru:		make test11
+Pro test 2 vystup na konsoli:		make test2
+Pro test 2 vystup do souboru:		make test21
+Pro test 3 vystup na konsoli:		make test3
+Pro test 3 vystup do souboru:		make test31
+Pro test 4 (neexistujici soubor):	make test4
+Pro test 5 (spatne sestaveny graf):	make test5
+Pro test 6 (spatne sestaveny graf):	make test6
+Pro test 7 (spatne sestaveny graf):	make test7
+Pro test 8 (spatne sestaveny graf):	make test8
+Pro vycisteni adresare:			make clean
+

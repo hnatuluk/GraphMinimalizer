@@ -1,16 +1,13 @@
 States
-4
-a b c d
+1
+a
 FiniteStates
-2
-a b
+1
+a
 Inputs
 4
 1 2 3 4
 InputsStateTable
-4
+1
 4
 a a a - a
-b b b b b
-c c c - c
-d d d d d

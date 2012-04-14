@@ -11,6 +11,8 @@
 #include "GraphLoader.h"
 #include "GraphChecker.h"
 #include "GraphSolver.h"
+#include "StateLoader.h"
+#include <iostream>
 #include <map>
 
 using namespace std;

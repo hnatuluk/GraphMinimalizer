@@ -1,5 +1,4 @@
 #include "StateLoader.h"
-#include "File.h"
 
 StateLoader::StateLoader() {
 }

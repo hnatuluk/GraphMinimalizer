@@ -18,6 +18,11 @@
 #include "GraphChecker.h"
 #include "GraphSolver.h"
 #include "OutputWriter.h"
+#include "StateLoader.h"
+#include "InputLoader.h"
+#include "FiniteStateLoader.h"
+#include "InputStateTable.h"
+#include <iostream>
 
 class GraphMinimalizerException : public Exception {
     string message;

@@ -1,5 +1,3 @@
-#include <map>
-
 #include "ConsoleWriter.h"
 
 ConsoleWriter::ConsoleWriter() {

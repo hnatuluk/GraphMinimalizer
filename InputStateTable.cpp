@@ -1,6 +1,4 @@
 #include "InputStateTable.h"
-#include "StateLoader.h"
-#include <iostream>
 using namespace std;
 InputStateTable::InputStateTable() {
     filled = false;
@@ -33,7 +31,7 @@ bool InputStateTable::checkContent(const GraphChecker &states, const GraphChecke
         values = (*it).second;
         tmpRet = states.containsToken(key);
         if (!tmpRet) {
-            cerr << "The state " + key + "in InputStateTable is not in States set ..." << endl;
+            cerr << "The state " + key + " in InputStateTable is not in States set ..." << endl;
             ret = false;
         }
         for (int i = 0; i < this->states; i++) {

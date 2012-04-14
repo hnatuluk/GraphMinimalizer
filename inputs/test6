@@ -1,0 +1,9 @@
+States
+4
+a b c d
+FiniteStates
+2
+a b
+Inputs
+4
+1 2 3 4

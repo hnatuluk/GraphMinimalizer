@@ -1,8 +1,4 @@
-
-
-
 #include "FileWriter.h"
-#include "File.h"
 FileWriter::FileWriter(const string& filename){
     this->filename = filename;
 }

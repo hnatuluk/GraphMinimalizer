@@ -1,5 +1,4 @@
 #include "InputLoader.h"
-#include "File.h"
 
 InputLoader::InputLoader() {
     filled = false;

@@ -11,6 +11,7 @@
 #include "GraphLoader.h"
 #include "GraphChecker.h"
 #include "GraphSolver.h"
+#include "File.h"
 #include <set>
 #include <string>
 using namespace std;
