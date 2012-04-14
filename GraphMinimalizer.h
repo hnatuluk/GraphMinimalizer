@@ -17,6 +17,7 @@
 #include "Exception.h"
 #include "GraphChecker.h"
 #include "GraphSolver.h"
+#include "OutputWriter.h"
 
 class GraphMinimalizerException : public Exception {
     string message;
@@ -25,22 +26,24 @@ public:
     string const &getMessage();
 };
 
-class GraphMinimalizer {
+class GraphMinimalizer  {
     File f;
     GraphLoader **loaders;
     GraphChecker **checker;
     GraphSolver **solvers;
+    OutputWriter *wr;
     void fillLoaders(const string &token, File &file) throw (GraphMinimalizerException);
     void loadGraph()throw (FileCannotBeOpenException);
     void checkGraph() throw (GraphMinimalizerException);
     void minimalizeGraph();
     void init();
-    const string &getName(const int &index);
 public:
     GraphMinimalizer(File *f);
     GraphMinimalizer(File f);
     virtual ~GraphMinimalizer();
+    void setOutputWrites(OutputWriter *owr);
     void minimalize() throw (FileCannotBeOpenException, GraphMinimalizerException);
+    virtual const string &getName(const int &index);
 };
 
 #endif	/* GRAPHMINIMALIZER_H */
