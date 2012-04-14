@@ -78,7 +78,7 @@ void GraphMinimalizer::minimalizeGraph(){
     int maxGroup = 0;
     string *states = solvers[STATE]->getAllValues();
     map<string, int> indexes;
-    int* subGroups = new int [statesNo];
+    int* subGroups = new int [statesNo+1];
     string **inputStateTable = new string *[statesNo];
     int **statesTable = new int* [statesNo];
     int **statesTablePrev = new int* [statesNo];
@@ -87,16 +87,32 @@ void GraphMinimalizer::minimalizeGraph(){
         statesTablePrev[i] = new int [inputsNo];
     }
 
+    /*Inicializace blanku*/
+    indexes.insert(pair<string, int>("-",0));
+    subGroups[0] = -1;
+
+    /*Inicializace prechodu*/
     for (int i = 0; i < statesNo ; i++){
         const string &key = states[i];
         int subGroup = solvers[FINITESTATE]->containsValue(key)?0:1;
         maxGroup = subGroup > maxGroup ?subGroup:maxGroup;
         indexes.insert(pair<string, int>(states[i],i));
-        subGroups[i] = subGroup;
+        /*Posunuto kvuli blanku*/
+        subGroups[i+1] = subGroup;
         inputStateTable[i] = solvers[INPUTSSTATETABLE]->getValuesFor(key);
     }
     delete [] states;
     states = NULL;
+
+    /*Inicializace*/
+    for (int x = 0; x < statesNo; x++){
+        for (int y = 0; y < inputsNo; y++){
+            string key = inputStateTable[x][y];
+            int value = (*indexes.find(key)).second;
+            int sValue = subGroups[value];
+            statesTable[x][y] = sValue;
+        }
+    }
 
     delete [] subGroups;
     subGroups = NULL;
